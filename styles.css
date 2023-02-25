@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
+
+/* set up three.js canvas */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+/* reset styles for background/avoiding white margins and scrollbars */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 1.5rem;
+}
+
+/* need background image to not repeat vertically, but it's ok horizontally
+   don't want any distortion/squishing of image on resize
+   originally had the background in threejs, but it seemed difficult to manipulate 
+*/
+
+body {
+  background-image: url("./images/forestDusk.jpg");
+  background-size: auto 100vh;
+  background-attachment: fixed;
+}
+
+/* styling the actual html */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 100px 100px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  /* box-shadow: 1px 8px 34px 8px rgba(0, 0, 0, 0.5);*/
+  box-shadow: 1px 11px 39px 14px rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.nav-items {
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 60px;
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  text-shadow: 0px 3px 17px rgba(0, 0, 0, 1), 0px 3px 20px rgba(0, 0, 0, 1);
+}
+
+.main-title-section {
+  grid-row: 1/2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-title {
+  text-shadow: 0px 3px 17px rgba(0, 0, 0, 1), 0px 3px 20px rgba(0, 0, 0, 1);
+  font-size: 3rem;
+  font-family: "Nothing You Could Do", cursive;
+
+  animation: fade ease-in-out 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.about-section {
+  grid-row: 2/3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.about-text-container {
+  margin: 20px;
+  max-width: 40ch;
+}
+
+.about-img {
+  width: 300px;
+  box-shadow: 1px 11px 39px 14px rgba(0, 0, 0, 0.55);
+}
+
+.cabin-section {
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.cabin-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabin-images > img {
+  width: 400px;
+  margin: 20px;
+}
