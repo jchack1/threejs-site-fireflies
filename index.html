@@ -12,11 +12,13 @@
       <img src="./images/jhack-logo.png" class="logo" alt="logo" />
 
       <div class="nav-items">
+        <img src="./images/close.svg" alt="close-menu" id="close-menu" />
         <p>about</p>
         <p>cabins</p>
         <p>map</p>
         <p>reserve</p>
       </div>
+      <div class="hamburger-menu" id="hamburger-menu"></div>
     </nav>
 
     <main>
@@ -31,34 +33,23 @@
         <div class="about-text-container">
           <h2>escape the grind, live in the forest.</h2>
           <p class="about-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-            distinctio dolores laborum nesciunt debitis, laboriosam, esse quo
-            nam doloribus officiis quae impedit saepe minima quaerat non animi
-            ab incidunt fugit!
+            Cronut irure williamsburg truffaut air plant bodega boys XOXO
+            single-origin coffee slow-carb Brooklyn plaid waistcoat try-hard. Af
+            disrupt venmo asymmetrical next level austin. Bushwick cloud bread
+            unicorn raw denim est ad, hexagon four dollar toast. Tumeric occupy
+            kombucha, pop-up mustache bruh thundercats meh pickled gochujang fit
+            velit ethical. Messenger bag snackwave brunch godard food truck
+            selfies street art jean shorts four loko marxism.
           </p>
         </div>
 
-        <img
-          src="./images/romanas-PYkX4ruvXXs-unsplash.jpg"
-          alt="cabins in forest"
-          class="about-img"
-        />
-      </section>
-
-      <!-- <section class="cabin-section">
-        <h2>our cabins</h2>
-        <div class="cabin-images">
-          <img src="./images/romanas-PYkX4ruvXXs-unsplash.jpg" alt="cabin 1" />
+        <div class="about-img-container">
           <img
-            src="./images/kristin-ellis-qHlUwZLS5F4-unsplash.jpg"
-            alt="cabin 3"
-          />
-          <img
-            src="./images/michele-tardivo-G0OnHccvwcA-unsplash.jpg"
-            alt="cabin 2"
+            src="./images/romanas-PYkX4ruvXXs-unsplash.jpg"
+            alt="cabins in forest"
           />
         </div>
-      </section> -->
+      </section>
 
       <section class="cabin-section">
         <h2>our cabins</h2>
@@ -95,10 +86,39 @@
           />
         </div>
       </section>
+
+      <section class="map-section">
+        <h2>area map</h2>
+        <div class="map-container">
+          <img
+            src="./images/sebastian-herrmann-z_9wP9YAhQ8-unsplash.jpg"
+            alt="hand drawn map"
+          />
+        </div>
+      </section>
+
+      <section class="reserve-section">
+        <button><h2>reserve your stay</h2></button>
+      </section>
     </main>
+
+    <footer>
+      <p>
+        <a href="https://github.com/jchack1" target="_blank"
+          ><i class="fa fa-github-square"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/juliahack" target="_blank"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+        <a href="https://www.instagram.com/juliachack/?hl=en" target="_blank"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </p>
+      <p>&copy; Julia Hack</p>
+    </footer>
 
     <canvas id="bg"></canvas>
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/scripts/3D.js"></script>
   </body>
 </html>
