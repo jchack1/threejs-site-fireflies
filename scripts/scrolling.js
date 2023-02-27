@@ -1,22 +1,15 @@
+//making sure we always start out at top on refresh
+
 window.scrollTo(0, 0);
 
-document.querySelectorAll(".nav-link").forEach((x) => {
-  console.log(x);
-  x.addEventListener("click", (e) => {
-    e.preventDefault();
-    const id = this.getAttribute("href");
-    console.log(id);
-    document
-      .querySelector(id.split("#")[1])
-      .scrollIntoView({behavior: "smooth"});
-  });
-});
-
+//selecting all the nav links
 const aboutLink = document.querySelector(".about-link");
 const cabinsLink = document.querySelector(".cabins-link");
 const mapLink = document.querySelector(".map-link");
 const reserveLink = document.querySelector(".reserve-link");
 const logoLink = document.querySelector(".logo");
+
+//adding event listeners so we can scroll to each section on click
 
 aboutLink.addEventListener("click", (e) => {
   e.preventDefault();
@@ -43,12 +36,14 @@ reserveLink.addEventListener("click", (e) => {
     .scrollIntoView({behavior: "smooth"});
 });
 
+//scroll back to the top of page when we click on logo
+
 logoLink.addEventListener("click", (e) => {
   e.preventDefault();
   window.scrollTo({top: 0, left: 0, behavior: "smooth"});
 });
 
-//nav classes
+//add/remove classes from header so we can shrink header when we're scrolling around the main content
 
 window.addEventListener("scroll", function () {
   const mainTitle = document.querySelector(".main-title-section");

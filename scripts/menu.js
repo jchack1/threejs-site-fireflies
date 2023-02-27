@@ -1,10 +1,10 @@
+//adding/removing classes depending on if the side menu is open or not
+
 const hamburgerMenu = document.querySelector("#hamburger-menu");
 const mobileMenu = document.querySelector("#global-nav");
 const closeMenu = document.querySelector("#close-menu");
 
 hamburgerMenu.addEventListener("click", function () {
-  // mobileMenu.className = "menu-open";
-  // mobileMenu.className.add("hamburger-hide");
   mobileMenu.classList.remove("menu-close");
 
   mobileMenu.classList.add("menu-open");

@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Raleway&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
+/* note that in this file, media queries are with their own sections */
+
 /* set up three.js canvas */
 canvas {
   position: fixed;
@@ -37,11 +39,6 @@ h2 {
   font-family: "Nothing You Could Do", cursive;
   font-size: 1.5rem;
 }
-
-/* need background image to not repeat vertically, but it's ok horizontally
-   don't want any distortion/squishing of image on resize
-   originally had the background in threejs, but it seemed difficult to manipulate 
-*/
 
 body {
   background-image: url("./images/forestDusk.jpg");
@@ -196,20 +193,6 @@ main {
   text-shadow: 0px 3px 17px rgba(0, 0, 0, 1), 0px 3px 20px rgba(0, 0, 0, 1);
   padding: 0 40px;
 }
-
-/* @media (max-width: 500px) {
-  main {
-    grid-template-rows: 100vh repeat(4, 60vh);
-  }
-} */
-
-/* .section {
-  padding: 125px 0 275px 0;
-}
-
-.about-section {
-  padding: 200px 0;
-} */
 
 .section {
   padding: 20vh 0;
