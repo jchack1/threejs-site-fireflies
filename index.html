@@ -7,20 +7,22 @@
     <title>Fireflies at dusk</title>
   </head>
   <body>
-    <!-- should be flex box with space-between, also fixed to top, change position on scroll down page -->
-    <nav>
-      <img src="./images/jhack-logo.png" class="logo" alt="logo" />
+    <header class="header">
+      <i class="fa fa-pagelines logo"></i>
 
-      <div class="nav-items">
-        <img src="./images/close.svg" alt="close-menu" id="close-menu" />
-        <p>about</p>
-        <p>cabins</p>
-        <p>map</p>
-        <p>reserve</p>
-      </div>
-      <div class="hamburger-menu" id="hamburger-menu"></div>
-    </nav>
+      <nav class="global-nav" id="global-nav">
+        <ul class="global-nav-ul">
+          <img src="./images/close.svg" alt="close-menu" id="close-menu" />
 
+          <li class="about-link">about</li>
+          <li class="cabins-link">cabins</li>
+          <li class="map-link">map</li>
+          <li class="reserve-link">reserve</li>
+        </ul>
+      </nav>
+
+      <div class="hamburger-menu fade-in-1" id="hamburger-menu"></div>
+    </header>
     <main>
       <section class="main-title-section">
         <div>
@@ -28,10 +30,9 @@
         </div>
       </section>
 
-      <!-- need nav to link down here, scrollTo animation probably, need js -->
-      <section class="about-section">
+      <section class="about-section section" id="about-section">
         <div class="about-text-container">
-          <h2>escape the grind, live in the forest.</h2>
+          <h2>escape the grind, run away to the forest.</h2>
           <p class="about-description">
             Cronut irure williamsburg truffaut air plant bodega boys XOXO
             single-origin coffee slow-carb Brooklyn plaid waistcoat try-hard. Af
@@ -51,7 +52,7 @@
         </div>
       </section>
 
-      <section class="cabin-section">
+      <section class="cabin-section section" id="cabin-section">
         <h2>our cabins</h2>
         <div class="cabin-images">
           <img
@@ -87,7 +88,7 @@
         </div>
       </section>
 
-      <section class="map-section">
+      <section class="map-section section" id="map-section">
         <h2>area map</h2>
         <div class="map-container">
           <img
@@ -97,7 +98,7 @@
         </div>
       </section>
 
-      <section class="reserve-section">
+      <section class="reserve-section section" id="reserve-section">
         <button><h2>reserve your stay</h2></button>
       </section>
     </main>
@@ -110,15 +111,15 @@
         <a href="https://www.linkedin.com/in/juliahack" target="_blank"
           ><i class="fa fa-linkedin"></i
         ></a>
-        <a href="https://www.instagram.com/juliachack/?hl=en" target="_blank"
-          ><i class="fa fa-instagram"></i
-        ></a>
+        <a><i class="fa fa-instagram"></i></a>
       </p>
-      <p>&copy; Julia Hack</p>
+      <p>&copy; The Forest Cabins</p>
     </footer>
 
     <canvas id="bg"></canvas>
 
     <script type="module" src="/scripts/3D.js"></script>
+    <script type="module" src="/scripts/menu.js"></script>
+    <script type="module" src="/scripts/scrolling.js"></script>
   </body>
 </html>
