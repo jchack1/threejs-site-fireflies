@@ -9,6 +9,8 @@ const mapLink = document.querySelector(".map-link");
 const reserveLink = document.querySelector(".reserve-link");
 const logoLink = document.querySelector(".logo");
 
+const backToTop = document.querySelector(".back-to-top");
+
 //adding event listeners so we can scroll to each section on click
 
 aboutLink.addEventListener("click", (e) => {
@@ -43,7 +45,14 @@ logoLink.addEventListener("click", (e) => {
   window.scrollTo({top: 0, left: 0, behavior: "smooth"});
 });
 
+backToTop.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+});
+
 //add/remove classes from header so we can shrink header when we're scrolling around the main content
+
+//also add/remove inactive class to back-to-top icon so it appears only when we scoll down
 
 window.addEventListener("scroll", function () {
   const mainTitle = document.querySelector(".main-title-section");
@@ -52,7 +61,9 @@ window.addEventListener("scroll", function () {
 
   if (window.scrollY > mainTitle.offsetTop + mainTitle.offsetHeight) {
     headerSection.classList.add("header-small");
+    backToTop.classList.remove("inactive");
   } else {
     headerSection.classList.remove("header-small");
+    backToTop.classList.add("inactive");
   }
 });
